@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Components/Navbar';
+import { store } from './Redux/store/store';
+import AddShopScreen from './Screens/AddShopScreen';
+import ShopListScreen from './Screens/ShopListScreen';
+import './Styles/style.css'
+
 
 function App() {
   return (
+    <Provider store={store}>
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+      <Navbar/>
+        <Routes>
+          <Route path="/addshop" element={<AddShopScreen />} />
+          <Route path="/" exact element={<ShopListScreen />} />
+        </Routes>
+
+      </Router>
     </div>
+    </Provider>
   );
 }
 
