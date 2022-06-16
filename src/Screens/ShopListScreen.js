@@ -1,13 +1,13 @@
-import React from 'react'
-import Filter from '../Components/Filter'
+import React from "react";
+import ShopList from "../Components/ShopList";
 
 function ShopListScreen() {
+
   return (
-    <div className='shop-list'>
-        <Filter/>
-        
+    <div>
+      <ShopList />
     </div>
-  )
+  );
 }
 
-export default ShopListScreen
+export default ShopListScreen;

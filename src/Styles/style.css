@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-family: "Varela Round", sans-serif;
+}
+
+body {
+  background-color: #ecd8e0;
 }
 
 .navbar {
@@ -11,12 +18,231 @@
           justify-content: space-evenly;
 }
 
+.form {
+  background-color: #bad8e0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 30%;
+  margin: auto;
+  padding: 50px;
+  border-radius: 15px;
+  border: solid 2px #6abcd3;
+}
+
+.form #name-required,
+.form #name-error,
+.form #area-required,
+.form #category-required,
+.form #opeining-date-required,
+.form #closing-date-required,
+.form #closing-date-error {
+  display: none;
+}
+
+.form span {
+  color: red;
+  text-align: right;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.form b {
+  padding: 5px;
+}
+
+.form .name-field {
+  background: #ffd5b6;
+  height: 5vh;
+  border: solid 2px lightgray;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  width: 65%;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-family: "Varela Round", sans-serif;
+}
+
+.form select {
+  background: #ffd5b6;
+  height: 5vh;
+  border: solid 2px lightgray;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  width: 65%;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-family: "Varela Round", sans-serif;
+}
+
+.form .date-field {
+  background: #ffd5b6;
+  height: 5vh;
+  border: solid 2px lightgray;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  width: 65%;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-family: "Varela Round", sans-serif;
+}
+
+.form button {
+  background: #ffd5b6;
+  height: 5vh;
+  border: solid 2px lightgray;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  width: 65%;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-family: "Varela Round", sans-serif;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: initial;
+  font-weight: bolder;
+  color: green;
+}
+
+.form button:hover {
+  cursor: pointer;
+  background-color: #22c538;
+  color: black;
+}
+
 .filter {
+  background-color: #bad8e0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  height: 10vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  margin: auto;
+  border: solid 2px #6abcd3;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.filter select {
+  background: #ffd5b6;
+  height: 5vh;
+  border: solid 2px lightgray;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  width: 20vh;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-family: "Varela Round", sans-serif;
+}
+
+.shop-list {
+  background-color: #bad8e0;
+  margin: 25px;
+  padding: 10px;
+  border: solid 2px #6abcd3;
+  padding: 10px;
+  border-radius: 15px;
+  width: 50%;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.shop-details {
+  background: #ffd5b6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border: solid 2px #dd9866;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.shop-details #category-div {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.shop-details button {
+  height: 7vh;
+  width: 7vh;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background: lightcoral;
+  border: solid 2px lightgray;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.shop-details button:hover {
+  background-color: black;
+}
+
+@media screen and (max-width: 980px) {
+  .filter,
+  .shop-list {
+    width: 85%;
+  }
+  .form {
+    width: 50%;
+  }
+  .form .name-field,
+  .form .date-field,
+  .form select,
+  .form button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 30vh;
+  }
+  .form {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .shop-details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */
